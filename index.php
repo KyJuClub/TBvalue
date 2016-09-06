@@ -1,12 +1,28 @@
-<html>
-<body>
 <?php
-// A simple web site in Cloud9 that runs through Apache
-// Press the 'Run' button on the top to start the web server,
-// then click the URL that is emitted to the Output tab of the console
 
-echo ' Hello world from Cloud9! ';
+echo <<<_START
+
+<!DOCTYPE html>
+<html>
+    <body>
+    
+        <h1>Textbook Value Homepage</h1>
+        
+        <p>Click the button to add a new book</p>
+        
+        <button onclick="newBook()">Add new book</button>
+        
+        <script>
+            function newBook() {
+                    document.location.href = '/TBvalue/app/php/new.php';
+            }
+        </script>
+    
+    </body>
+</html>
+
+
+_START;
+
 
 ?>
-</body>
-</html>
