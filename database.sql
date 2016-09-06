@@ -16,11 +16,11 @@ CREATE TABLE book(
     PRIMARY KEY (name,id)) ENGINE MyISAM;
 
 
-CREATE TABLE describe (
-	username VARCHAR(12),
+CREATE TABLE description(
+    username VARCHAR(12),
 	name VARCHAR(50),
     PRIMARY KEY (username,name),
     FOREIGN KEY (username)
          REFERENCES user,
     FOREIGN KEY (name)
-         REFERENCES book) ENGINE MyISAM;
+         REFERENCES book) ENGINE MyISAM;         
